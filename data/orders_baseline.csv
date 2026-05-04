@@ -1,0 +1,11 @@
+order_id,event_date,customer_id,region,revenue,status
+9001,2026-04-14,C001,West,3900,complete
+9002,2026-04-14,C002,East,4200,complete
+9003,2026-04-15,C003,South,6400,complete
+9004,2026-04-15,C004,Midwest,2300,complete
+9005,2026-04-16,C005,West,4100,complete
+9006,2026-04-16,C006,East,3600,complete
+9007,2026-04-17,C007,South,6900,complete
+9008,2026-04-17,C008,Midwest,2100,complete
+9009,2026-04-18,C009,West,4300,complete
+9010,2026-04-18,C010,East,3900,complete

@@ -1,0 +1,13 @@
+order_id,event_date,customer_id,region,revenue,status
+1001,2026-04-21,C781,West,4200,complete
+1002,2026-04-21,C144,East,3800,complete
+1003,2026-04-22,C993,South,9100,complete
+1004,2026-04-22,C222,Midwest,1250,complete
+1005,2026-04-23,C781,West,4400,complete
+1006,2026-04-23,C421,East,,pending
+1007,2026-04-24,C301,South,8700,complete
+1008,2026-04-24,C301,South,8700,complete
+1009,2026-04-25,C890,West,45200,complete
+1010,2026-04-25,C112,East,3300,complete
+1011,2026-04-26,C515,Midwest,1900,cancelled
+1012,2026-04-27,C616,West,5100,complete

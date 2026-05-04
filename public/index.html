@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Data Quality Radar</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Data Reliability Product</p>
+        <h1>Data Quality Radar</h1>
+        <p>Monitor completeness, uniqueness, schema drift, freshness, and anomalies before bad data reaches dashboards.</p>
+      </section>
+
+      <section class="score-card">
+        <div>
+          <span>Quality Score</span>
+          <strong id="score">--</strong>
+        </div>
+        <p id="status">Scanning dataset...</p>
+      </section>
+
+      <section id="checks" class="checks"></section>
+
+      <section class="recommendations">
+        <span>Recommended Fixes</span>
+        <ul id="recommendations"></ul>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

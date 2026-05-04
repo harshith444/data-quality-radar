@@ -1,0 +1,19 @@
+{
+  "name": "data-quality-radar",
+  "version": "1.0.0",
+  "description": "A browser dashboard and API that scores dataset quality across completeness, uniqueness, drift, freshness, and anomalies.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "data-quality",
+    "analytics",
+    "monitoring",
+    "anomaly-detection"
+  ],
+  "author": "Harshith Katakam",
+  "license": "MIT"
+}
