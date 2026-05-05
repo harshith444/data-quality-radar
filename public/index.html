@@ -24,9 +24,24 @@
 
       <section id="checks" class="checks"></section>
 
+      <section class="agent-panel">
+        <span>Self-Cleaning Agent</span>
+        <h2>Use-case-aware cleaning plan</h2>
+        <div class="agent-row">
+          <input id="use-case" value="predict churn and understand revenue quality" />
+          <button id="plan">Generate Plan</button>
+        </div>
+        <div id="agent-output" class="agent-output"></div>
+      </section>
+
       <section class="recommendations">
         <span>Recommended Fixes</span>
         <ul id="recommendations"></ul>
+      </section>
+
+      <section class="recommendations">
+        <span>Connector Readiness</span>
+        <ul id="connectors"></ul>
       </section>
     </main>
     <script src="/app.js"></script>

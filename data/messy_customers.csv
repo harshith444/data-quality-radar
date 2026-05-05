@@ -1,0 +1,8 @@
+ Customer ID , Segment , Signup Date , Revenue , Churn Flag , Notes , Empty Column
+ C001 , enterprise , 2026-01-02 , 1200.00 , No , " high value account " ,
+ C002 , Enterprise, 2026/01/04 , , no , "needs follow up" ,
+ C003 , smb , 01-06-2026 , 0.00 , YES , "late payment" ,
+ C004 , SMB , 2026-01-08 , 450.50 , yes , " late payment " ,
+ C004 , SMB , 2026-01-08 , 450.50 , yes , " late payment " ,
+ C005 , mid market , 2026-01-10 , 899.99 , N , " expansion candidate " ,
+ C006 , Mid-Market , 2026-01-12 , 150000.00 , No , "possible outlier" ,

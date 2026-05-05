@@ -57,6 +57,7 @@ li {
 
 .score-card,
 .check,
+.agent-panel,
 .recommendations {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -122,6 +123,54 @@ strong {
   padding: 22px;
 }
 
+.agent-panel {
+  margin: 14px 0;
+  padding: 22px;
+}
+
+.agent-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+input,
+button {
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  padding: 12px 14px;
+}
+
+input {
+  background: #0f172a;
+  color: var(--text);
+  outline: 1px solid var(--line);
+}
+
+button {
+  background: var(--green);
+  color: #062016;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.agent-output {
+  color: var(--muted);
+}
+
+.score-line {
+  align-items: baseline;
+  display: flex;
+  gap: 10px;
+}
+
+.score-line strong {
+  color: var(--green);
+  font-size: 2.5rem;
+}
+
 @media (max-width: 880px) {
   .checks {
     grid-template-columns: repeat(2, 1fr);
@@ -130,6 +179,10 @@ strong {
   .score-card {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .agent-row {
+    grid-template-columns: 1fr;
   }
 }
 

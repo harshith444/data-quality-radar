@@ -1,0 +1,14 @@
+[project]
+name = "data-quality-radar-agent"
+version = "0.1.0"
+description = "Notebook-first data quality and self-cleaning agent for Pandas and Databricks-style workflows."
+requires-python = ">=3.10"
+authors = [{ name = "Harshith Katakam" }]
+dependencies = []
+
+[project.optional-dependencies]
+notebook = ["pandas"]
+cloud = ["boto3", "azure-storage-blob", "snowflake-connector-python"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
