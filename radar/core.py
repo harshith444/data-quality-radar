@@ -7,6 +7,8 @@ import re
 from statistics import median
 from typing import Any, Iterable
 
+from .ml import build_ml_insights
+
 
 NULL_LIKE = {"", "null", "none", "n/a", "na", "nan", "undefined"}
 
@@ -19,6 +21,7 @@ class RadarResult:
     preview: dict[str, Any]
     report: dict[str, Any]
     notebook_cells: list[str]
+    ml_insights: dict[str, Any]
 
     def _repr_html_(self) -> str:
         rows = "".join(
@@ -127,6 +130,7 @@ def clean(data: Any, cleaning_plan: dict[str, Any]) -> Any:
 
 def run(data: Any, use_case: str, mode: str = "balanced", apply: bool = False) -> RadarResult:
     data_profile = profile(data, use_case)
+    ml_insights = build_ml_insights(data, data_profile, use_case)
     cleaning_plan = plan(data, use_case, mode)
     effective_plan = deepcopy(cleaning_plan)
     if apply:
@@ -139,8 +143,9 @@ def run(data: Any, use_case: str, mode: str = "balanced", apply: bool = False) -
         profile=data_profile,
         plan=cleaning_plan,
         preview=preview_report,
-        report={"useCase": use_case, "applied": apply, "analysisSuggestions": cleaning_plan["analysisSuggestions"]},
+        report={"useCase": use_case, "applied": apply, "analysisSuggestions": cleaning_plan["analysisSuggestions"], "mlInsights": ml_insights},
         notebook_cells=to_notebook_cells(cleaning_plan),
+        ml_insights=ml_insights,
     )
 
 

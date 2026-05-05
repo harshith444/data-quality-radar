@@ -18,6 +18,7 @@ A notebook-first data quality and self-cleaning agent that profiles datasets, un
 - Jupyter-style Python package: `radar.profile`, `radar.plan`, `radar.preview`, `radar.clean`, `radar.run`
 - Databricks-ready Spark adapter path through `radar.run(spark_df, ...)`
 - OpenAI provider adapter with deterministic fallback
+- Pure-Python ML-style feature ranking, target inference, anomaly signals, and next-step analysis guidance
 - Use-case-aware analysis suggestions
 - Local/S3/Azure/Snowflake connector readiness model
 - No external dependencies
@@ -52,6 +53,14 @@ Apply approved fixes:
 cleaned = radar.clean(df, result.plan)
 ```
 
+Run the Python demo:
+
+```bash
+python3 -m radar
+```
+
+The demo runs the agent on a messy churn-style dataset and prints quality issues, before/after score, cleaning actions, ML-style insights, recommended next analyses, and generated notebook cells.
+
 In a Databricks-style workflow, the same API can accept a Spark DataFrame if the runtime supports `toPandas()`:
 
 ```python
@@ -70,6 +79,7 @@ Open `http://localhost:3001`.
 
 ```bash
 npm test
+npm run test:python
 ```
 
 ## API
@@ -85,7 +95,7 @@ npm test
 
 ## Stack
 
-Node.js, JavaScript, Python, CSV rules engine, notebook agent API, OpenAI provider adapter, HTML, CSS.
+Node.js, JavaScript, Python, pure-Python ML heuristics, CSV rules engine, notebook agent API, OpenAI provider adapter, HTML, CSS.
 
 ## Links
 

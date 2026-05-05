@@ -41,6 +41,8 @@ class RadarAgentTest(unittest.TestCase):
         result = radar.run(MESSY_ROWS, use_case="predict churn", apply=False)
         self.assertTrue(result.notebook_cells)
         self.assertIn("analysisSuggestions", result.report)
+        self.assertIn("featureRanking", result.ml_insights)
+        self.assertEqual(result.ml_insights["targetColumn"], " Churn Flag ")
 
 
 if __name__ == "__main__":
